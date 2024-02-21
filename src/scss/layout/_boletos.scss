@@ -1,0 +1,70 @@
+@use 'src/scss/base/variables' as v;
+@use 'src/scss/base/mixins' as m;
+
+.boletos {
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+    h3 {
+        text-align: center;
+        color: v.$blanco;
+        margin-bottom: 2rem;
+        font-size: 3.2rem;
+    }
+    .contenedor-boletos {
+        @include m.tablet {
+            @include m.grid(2, 5rem)
+        }
+    }
+}
+
+.pase {
+
+    p {
+        color: v.$blanco;
+    }
+
+    &-titulo,
+    &-header,
+    &-footer {
+        text-align: center;
+    }
+    &-titulo {
+        font-size: 2.8rem;
+    }
+
+    &-header {
+        background-color: v.$rosa;
+        padding: .5rem;
+
+        p {
+            margin: 0;
+            text-transform: uppercase;
+            font-size: 2.1rem;
+        }
+    }
+
+    &-footer {
+        background-color: v.$morado;
+        padding: .5rem;
+
+        p {
+            margin: 0;
+            font-size: 3rem;
+            font-weight: 540;
+        }
+    }
+
+    &-body {
+        background-color: v.$blanco;
+        font-size: 1.7rem;
+        ul {
+            @include m.resetear-lista;
+            li, :nth-child(odd) {
+                background-color: v.$blanco;
+                padding: 1rem;
+                border-bottom: 1px solid v.$gris;
+            }
+        }
+    }
+}
+
